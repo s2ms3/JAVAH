@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>자바 3주차</title>
+</head>
+	<p>
+	 <a href="index.html">돌아가기</a>
+	</p>
+	
+	<br>
+	<br>
+import java.awt.*;
+	<br>
+import java.awt.event.*;
+	<br>
+class 실습06_a {
+	<br>
+public static void main(String[] args) {
+	<br>
+Frame fr= new Frame(" 패널 데모");
+	<br>
+fr.setLayout(new GridLayout(1,1));
+	<br>
+Panel pan1 = new Panel(new FlowLayout());
+	<br>
+Panel pan2 = new Panel(new FlowLayout());
+	<br>
+pan1.setBackground(Color.orange);
+	<br>
+pan2.setBackground(Color.green);
+	<br>
+Button but1= new Button("1");
+	<br>
+Button but2= new Button("2");	
+	<br>
+Button but3= new Button("3");
+	<br>
+Button but4= new Button("4");
+	<br>
+Button but5= new Button("5");
+	<br>
+Button but6= new Button("6");
+	<br>
+Button but7= new Button("7");
+	<br>
+Button but8= new Button("8");
+	<br>
+Button but9= new Button("9");
+	<br>
+pan1.add(but1); pan1.add(but2); pan1.add(but3); pan1.add(but4);
+	<br>
+pan2.add(but5); pan2.add(but6); pan2.add(but7); pan2.add(but8);
+	<br>
+pan2.add(but9);
+	<br>
+pan1.setLayout( new FlowLayout());
+	<br>
+pan2.setLayout( new FlowLayout());
+	<br>
+fr.add(pan1); 
+	<br>
+fr.add(pan2);
+	<br>
+fr.addWindowListener( new WindowAdapter() {
+	<br>
+	public void windowClosing( WindowEvent e) {
+	<br>
+		System.exit(0); } });
+	<br>
+	
+fr.setSize(500, 400); fr.setVisible(true);
+	<br>
+
+} }
+	<br>
+<body>
+</body>
+</html>

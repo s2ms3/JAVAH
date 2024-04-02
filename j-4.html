@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>자바 4주차</title>
+</head>
+	<p>
+	 <a href="index.html">돌아가기</a>
+	</p>
+	
+	<br>
+	<br>
+import java.awt.* ;
+	<br>
+import java.awt.event.*; import javax.swing.*;
+	<br>
+public class C1 extends JFrame {
+	<br>
+    C1() {
+	<br>
+        setLayout( new FlowLayout( ) );
+	<br>
+        JLabel L1 = new JLabel("아이디ID1");
+	<br>
+        JTextField tf1 = new JTextField( "" , 20 );
+	<br>
+        JLabel L2 = new JLabel("비밀번호2");
+	<br>
+        JPasswordField tf2 = new JPasswordField( "" , 20 );
+	<br>
+        JLabel L3 = new JLabel("아이디ID3");
+	<br>
+        JTextField tf3 = new JTextField( "" , 20 );
+	<br>
+        JLabel L4 = new JLabel("비밀번호4");
+	<br>
+        JPasswordField tf4 = new JPasswordField( "" , 20 );
+	<br>
+        JLabel L5 = new JLabel("아이디ID5");
+	<br>
+        JTextField tf5 = new JTextField( "" , 20 );
+	<br>
+        JLabel L6 = new JLabel("비밀번호6");
+	<br>
+        JPasswordField tf6 = new JPasswordField( "" , 20 );
+	<br>
+        JLabel L7 = new JLabel("아이디ID7");
+	<br>
+        JTextField tf7 = new JTextField( "" , 20 );
+	<br>
+        JLabel L8 = new JLabel("비밀번호8");
+	<br>
+        JPasswordField tf8 = new JPasswordField( "" , 20 );
+	<br>
+
+        tf2.setEchoChar( '?' );
+	<br>
+        tf4.setEchoChar( '?' );
+	<br>
+        tf6.setEchoChar( '?' );
+	<br>
+        tf8.setEchoChar( '?' );
+	<br>
+
+        add(L1); add(tf1);
+	<br>
+        add(L2); add(tf2);
+	<br>
+        add(L3); add(tf3);
+	<br>
+        add(L4); add(tf4);
+	<br>
+        add(L5); add(tf5);
+	<br>
+        add(L6); add(tf6);
+	<br>
+        add(L7); add(tf7);
+	<br>
+        add(L8); add(tf8);
+	<br>
+        setTitle("비밀번호");
+	<br>
+        setSize(300,150);
+	<br>
+        setVisible(true); }
+	<br>
+    public static void main( String[ ] args ) {
+	<br>
+        C1 fr= new C1();
+	<br>
+        fr.addWindowListener( new WindowAdapter() {
+	<br>
+            public void windowClosing( WindowEvent e) {
+	<br>
+                System.exit(0); } });
+	<br>
+    } }
+	<br>
+<body>
+</body>
+</html>

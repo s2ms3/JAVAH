@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>자바 2주차</title>
+</head>
+	<p>
+	 <a href="index.html">돌아가기</a>
+	</p>
+	
+	<br>
+	<br>
+import java.awt.*; class 실습01{
+	<br>
+public static void main(String[] args) 
+	<br>
+{ Frame f= new Frame("예 2");
+	<br>
+Button b1= new Button("버튼");
+	<br>
+f.add(b1);
+	<br>
+f.setTitle("aaa aaa");
+	<br>
+f.setSize(300,150);
+	<br>
+f.setVisible(true); } }
+	<br>
+	
+	<br>
+실행결과: 타이틀은 aaa aaa, 가로 300 세로 150 사이즈의 버튼이 나온다
+	<br>
+	
+	<br>
+import java.awt.*; class 실습05{
+	<br>
+public static void main(String[] args) {
+	<br>
+Frame f= new Frame("예 3");
+	<br>
+Button b1= new Button("Button1");
+	<br>
+Button b2= new Button("Button2");
+	<br>
+Button b3= new Button("Button3");
+	<br>
+f.add(b1);  f.add(b2); f.add(b3);
+	<br>
+//f.setTitle("앗실수");
+	<br>
+f.setSize(300,150);
+	<br>
+f.setVisible(true); } }<br>
+
+	<br>
+실행결과: setTitle은//주석이라 제목은 예3 버튼은 1,2,3 3개이지만 마지막 3번의 버튼만 보인다.
+	<br>
+	<br>
+	
+import java.awt.*; class  실습06{<br>
+public static void main(String[] args) {<br>
+Frame f= new Frame("예 3");<br>
+FlowLayout f1 = new FlowLayout();<br>
+f.setLayout(f1);<br>
+Button b1= new Button("OK");<br>
+Button b2= new Button("CANCEL");<br>
+Button b3= new Button("stop");<br>
+f.add(b1);   f.add(b2);  f.add(b3); <br>
+f.setSize(300,150);<br>
+f.setVisible(true); <br>
+} }<br>
+<br>
+실행결과: 제목은 예 3 버튼은 flowLayout이 없으면 마지막 b3(stop)만 있겠지만 flowlayout이 있으므로 b1 b2 b3가 다 나온다
+<br><br>
+import java.awt.*;
+	<br>
+public class 실습07_1 {
+	<br>
+	public static void main(String[] args) {
+	<br>
+		Frame fr= new Frame("플로우레이아웃데모");
+	<br>
+		fr.setLayout(new FlowLayout(FlowLayout.LEFT,30,0));
+	<br>
+		fr.add(new Button("버튼1"));
+	<br>
+		fr.add(new Button("버튼2"));
+	<br>
+		fr.add(new Button("버튼3"));
+	<br>
+		fr.add(new Button("버튼4"));
+	<br>
+		fr.add(new Button("버튼5"));
+	<br>
+		fr.add(new Button("버튼6"));
+	<br>
+		fr.add(new Button("버튼7"));
+	<br>
+		fr.add(new Button("버튼8"));
+	<br>
+		fr.add(new Button("버튼9"));
+	<br>
+		fr.setSize(300,150);
+		fr.setVisible(true);
+	}
+<br>
+}
+	<br>
+	<br>
+실행결과: 제목 플로우레이아웃데모 수평간격30 만큼 정렬한 버튼 1~9번 까지 나온다
+<body>
+</body>
+</html>
