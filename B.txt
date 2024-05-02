@@ -1,0 +1,16 @@
+
+import javax.swing.JFrame;
+import java.awt.Graphics;
+
+public class B extends JFrame {
+public void paint(Graphics g2) {
+
+g2.drawArc(70, 170, 100, 50, 190, 150);
+
+	g2.drawArc(60,80,50,50,0,180);
+	g2.drawArc(150,80,50,50,0,180);
+	g2.fillOval(80, 135, 30, 30);
+	g2.fillOval(140, 135, 30, 30);
+	g2.drawOval(30,50 ,200,200 );
+	g2.drawOval(10,250 ,280,280 );
+} }
