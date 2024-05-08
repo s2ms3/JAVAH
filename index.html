@@ -3,52 +3,87 @@
 <head>
 <meta charset="utf-8">
 <title>JAVA</title>
-</head>
-	<p>
-	 <a href="j-1.html">1주차</a>
-	</p>
-	<p>
-	 <a href="j-2.html">2주차</a>
-	</p>
-	<p>
-	 <a href="j-3.html">3주차</a>
-	</p>
-	<p>
-	 <a href="j-4.html">4주차</a>
-	</p>
-	<p>
-	 <a href="j-5.html">5주차</a>
-	</p>
-	<p>
-	 <a href="j-6.html">6주차</a>
-	</p>
-	<p>
-	 <a href="j-7.html">7주차</a>
-	</p>
-	<p>
-	 <a href="j-8.html">8주차</a>
-	</p>
-	<p>
-	 <a href="j-9.html">9주차</a>
-	</p>
-	<p>
-	 <a href="j-10.html">10주차</a>
-	</p>
-	<p>
-	 <a href="j-11.html">11주차</a>
-	</p>
-	<p>
-	 <a href="j-12.html">12주차</a>
-	</p>
-	<p>
-	 <a href="j-13.html">13주차</a>
-	</p>
-	<p>
-	 <a href="j-14.html">14주차</a>
-	</p>
-	<p>
-	 <a href="j-15.html">15주차</a>
-	</p>
+</head>import java.awt.event.*;
+import java.awt.*; import javax.swing.*;
+public class Main extends JFrame {
+    Main() {
+        GridLayout g1= new GridLayout(4,1);
+        setLayout(g1);
+        JPanel p1= new JPanel();
+        JPanel p2= new JPanel();
+        JPanel p3= new JPanel();
+        JPanel p4 = new JPanel();
+        JLabel L1= new JLabel("계산기");
+        p1.add(L1);
+        JTextField tf1= new JTextField("0");
+        JTextField tf2 = new JTextField("0");
+        p2.add(tf1); p2.add(tf2);
+        JButton b1= new JButton("+");
+        JButton b2= new JButton("-");
+        JButton b3 = new JButton("*");
+        JButton b4= new JButton("/");
+        JButton b5= new JButton("clear");
+        JButton b6= new JButton("%");
+        p3.add(b1); p3.add(b2); p3.add(b3); p3.add(b4); p3.add(b6);
+        p3.add(b5);
+        JLabel L2= new JLabel("계산결과");
+        JLabel L3= new JLabel(" ");
+        p4.add(L2); p4.add(L3);
+        add(p1); add(p2); add(p3); add(p4);
+        setSize(600,500);
+        setVisible(true);
+        b1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == b1) {
+                    int n1= Integer.parseInt(tf1.getText());
+                    int n2 = Integer.parseInt(tf2.getText());
+                    int result = n1+n2;
+                    L3.setText(String.valueOf(result));}
+            }
+        });
+        b2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == b2) {
+                    int n1= Integer.parseInt(tf1.getText());
+                    int n2 = Integer.parseInt(tf2.getText());
+                    int result = n1-n2;
+                    L3.setText(String.valueOf(result));}
+            }
+        });
+        b3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == b3) {
+                    int n1= Integer.parseInt(tf1.getText());
+                    int n2 = Integer.parseInt(tf2.getText());
+                    int result = n1*n2;
+                    L3.setText(String.valueOf(result));}
+            }
+        });
+        b4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == b4) {
+                    int n1= Integer.parseInt(tf1.getText());
+                    int n2 = Integer.parseInt(tf2.getText());
+                    int result = n1/n2;
+                    L3.setText(String.valueOf(result));}
+            }
+        });
+        b6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == b6) {
+                    int n1= Integer.parseInt(tf1.getText());
+                    int n2 = Integer.parseInt(tf2.getText());
+                    int result = n1%n2;
+                    L3.setText(String.valueOf(result));}
+            }
+        });
+        b5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                tf1.setText(""); tf2.setText(""); } } );
+    }
+    public static void main(String[] args) {
+        Main fr= new Main();
+    } }
 
 
 <body>
